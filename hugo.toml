@@ -3,7 +3,11 @@ baseURL = "https://aes421.github.io/portfolio-site/"
 languageCode = "en-US"
 title = "Ashley Stallings"
 googleAnalytics = ""
-theme="hugo-developer-portfolio"
+
+[module]
+  [[module.imports]]
+    path = "hugo-developer-portfolio"
+
 
 # Plugins
 [params.plugins]
