@@ -20,7 +20,7 @@
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta name="description" property="og:description" content="This is meta description.">
+  <meta name="description" property="og:description" content="The website of Ashley Stallings, a senior software engineer">
   <meta name="image" property="og:image" content="/">
   <meta name="author" content="Ashley Stallings">
   <meta name="generator" content="Hugo 0.125.7">
@@ -36,8 +36,7 @@
   
   <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
 
-  <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/blog/index.xml" title="Ashley Stallings" />
-<script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
 
   <!--Favicon-->
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -153,45 +152,113 @@
 
 
 
+<style>
+  p {
+    margin: 0
+  }
 
-<section class="uk-margin-large-bottom">
-        <h1 class="uk-heading-large uk-text-center">Blog</h1>
-</section>
+  .people-wrap {
+    display: inline-flex;
+    margin-top: 10px;
+  }
+
+  .people-image {
+    display: block;
+    border-radius: 50%;
+     
+  }
+
+  .people {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .name {
+    margin: auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #000;
+    font-family: Roboto, sans-serif;
+    line-height: 1.2;
+    margin-top: 2rem;
+  }
+
+  .content img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:30px;
+  }
+
+  p { margin-bottom: 1em; }
+
+  body p:last-child { margin-bottom: 0em; }
+
+  img.skills{
+    height: 80px;
+  }
+
+  @media only screen and (min-width: 960px) {
+    .content img{max-width:60vw; max-height:60vh}
+
+  .content img{
+      max-width:60vw;
+      max-height:60vh
+  }
+  }
+  .content{
+      width: 90vw;
+      max-width: 1200px
+  }
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+</style>
 
 
+<section>
+  <div class="uk-container uk-margin-large-bottom uk-margin-medium-top">
+    <h1 class="uk-text-center uk-heading-medium">SQLite Without CGO</h1>
+    <p class="uk-text-center uk-text-lead"></p>
+    <p class="uk-text-center">Published on May 14, 2024</p>
+    <p class="uk-text-center">Reading time: 2 minutes.</p>
+    
 
-<section class="uk-margin-large-bottom">
-    <div class="uk-container">
-        <div class="uk-grid-small uk-child-width-1-4@s uk-text-center" uk-grid uk-height-match="target: > div > div > .card-body">
-            
+    <hr class="full-width">
+    
 
-            <div>
-                <div class="uk-card uk-card-default uk-width-1@m">
-                    <div class="card-body">
-                    <div class="uk-card-header">
-                        <div class="uk-grid-small uk-flex-middle" uk-grid>
-                            <div class="uk-width-expand">
-                                <h3 class="uk-card-title uk-margin-remove-bottom">SQLite Without CGO</h3>
-                                <p class="uk-text-meta uk-margin-remove-top"><time
-                                        datetime="2024-05-14 16:57:21 -0500 CDT">May 14, 2024</time></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-card-body">
-                        <p></p>
-                    </div>
-                </div>
-                    <div class="uk-card-footer">
-                        <a href="/blog/cgoless-sqlite/" class="uk-button uk-button-text">Read more</a>
-                    </div>
-                </div>
-            </div>
-            
-
-        </div>
+    <div class="content">
+      <h1 id="introduction">Introduction</h1>
+<p>Have you ever been working within a Go project that uses a SQLite database, and been met with the error <code>Binary was compiled with 'CGO_ENABLED=0', go-sqlite3 requires cgo to work. This is a stub</code> OR <code>cgo: C compiler &quot;gcc&quot; not found: exec: &quot;gcc&quot;: executable file not found</code>?  This issue occurs commonly on Windows machines when using the popular <a href="https://pkg.go.dev/github.com/mattn/go-sqlite3">mattn/go-sqlite3 package</a>.  But what causes it and how do we fix it?  Read on to find out.</p>
+<h1 id="whats-going-on">What&rsquo;s Going On?</h1>
+<p>Cgo allows us to write Gocode that calls C code.  This is great because any library that already exists in C can be seamlessly incorporated in a Go app.  However to compile your code you need a GCC compiler - a compiler that can compile C code.  When we look at the documentation for mattn/go-sqlite3 we can <a href="https://github.com/mattn/go-sqlite3?tab=readme-ov-file#installation">clearly see</a> this is a CGO package and needs a GCC compiler installed.  This means that the library is not a pure port of SQLite to Go.  Instead it is a wrapper around the C SQLite library. While we could go through the effort of installing GCC on Windows, is that our only option?</p>
+<h1 id="moving-forward">Moving Forward</h1>
+<p>Enter the <a href="https://pkg.go.dev/modernc.org/sqlite">modernc.org/sqlite package</a> - a CGO free port of SQLite.  With this package you can install and use SQLite without a GCC compiler.  The best part is that this package is a drop in replacement for mattn/go-sqlite3.  How is that possible?  Well, both mattn/go-sqlite3 and modernc.org/sqlite conform the the Go standard <code>database/sql</code> interface, so as long as you are only using <code>database/sql</code> in your code then you can simply swap these libraries in and out!</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>In this post, we&rsquo;ve examined the complexities involved in using the popular SQLite package, mattn/go-sqlite3.  Often when using SQLite we are prototyping small projects and may not necessarily want to go through the effort of installing a GCC compiler. Fortunately, in that case we can utilize the SQLite package created by modernc.  By providing a pure Go port of SQLite, we can prototype our project without ever needing to worry about CGO or GCC.</p>
 
     </div>
+  </div>
+  </div>
 </section>
+
 
 
     </div>

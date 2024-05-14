@@ -6,7 +6,14 @@
     <description>Recent content in Sam Robbins&#39; Website on Ashley Stallings</description>
     <generator>Hugo</generator>
     <language>en-US</language>
-    <lastBuildDate></lastBuildDate>
+    <lastBuildDate>Tue, 14 May 2024 16:57:21 -0500</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SQLite Without CGO</title>
+      <link>http://localhost:1313/blog/cgoless-sqlite/</link>
+      <pubDate>Tue, 14 May 2024 16:57:21 -0500</pubDate>
+      <guid>http://localhost:1313/blog/cgoless-sqlite/</guid>
+      <description>Introduction Have you ever been working within a Go project that uses a SQLite database, and been met with the error Binary was compiled with &#39;CGO_ENABLED=0&#39;, go-sqlite3 requires cgo to work. This is a stub OR cgo: C compiler &amp;quot;gcc&amp;quot; not found: exec: &amp;quot;gcc&amp;quot;: executable file not found? This issue occurs commonly on Windows machines when using the popular mattn/go-sqlite3 package. But what causes it and how do we fix it?</description>
+    </item>
   </channel>
 </rss>
