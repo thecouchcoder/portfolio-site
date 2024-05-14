@@ -1,4 +1,63 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
-theme = 'ananke'
+# Base information
+baseURL = "https://example.com"
+languageCode = "en-US"
+title = "Ashley Stallings"
+googleAnalytics = ""
+theme="hugo-developer-portfolio"
+
+# Plugins
+[params.plugins]
+
+  # CSS Plugins
+  [[params.plugins.css]]
+  URL = "https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css"
+
+  # JS Plugins
+  [[params.plugins.js]]
+  URL = "https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"
+  [[params.plugins.js]]
+  URL = "https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"
+
+
+# navigation
+[menu]
+
+  [[menu.main]]
+  name = "About"
+  URL = "about"
+  weight=1
+
+  [[menu.main]]
+  name = "Blog"
+  URL = "blog"
+  weight=2
+
+  [[menu.main]]
+  name = "Resume"
+  URL = "/resume.pdf"
+  weight=3
+
+
+[params]
+home = "Home"
+# Meta data
+description = "The website of Ashley Stallings, a senior software engineer"
+author = "Ashley Stallings"
+
+  [params.footer]
+  email = "aesdev421@gmail.com"
+  address = "Mississippi, USA"
+  googlemaps = "https://www.google.com/maps/place/Mississippi/data=!4m2!3m1!1s0x862832e4e44ad419:0x620d177fe9dca6da?sa=X&ved=1t:242&ictx=111"
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = true
+    style = "rainbow_dash"
+    tabWidth = 4
+

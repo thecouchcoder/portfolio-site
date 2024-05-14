@@ -1,0 +1,28 @@
+---
+banner:
+  title: Hi! I’m Ashley
+social:
+  twitter: ""
+  linkedin: ashley-stallings-137755a1
+  github: aes421
+  gitlab: ""
+  facebook: ""
+  instagram: ""
+  gmail: aesdev421
+about:
+  enable: true
+  content: Senior Software Engineer
+  button:
+    btnText: Find out more
+    URL: "/about"
+skill:
+  enable: true
+  item:
+    - title: C#
+      logo: https://res.cloudinary.com/dhoazk5kt/image/upload/v1715649940/Logo_C_sharp_qq1sjj.svg
+    - title: Go
+      logo: https://res.cloudinary.com/dhoazk5kt/image/upload/v1715649975/Go_Logo_Blue_aeaxi7.svg
+    - title: JavaScript / TypeScript
+      logo: https://res.cloudinary.com/dhoazk5kt/image/upload/v1715649880/logos_javascript_adj1dx_hewnbw.svg
+    - title: Angular
+      logo: https://res.cloudinary.com/dhoazk5kt/image/upload/v1715650073/Angular_full_color_logo_bhti3a.svg
