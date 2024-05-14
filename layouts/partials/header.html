@@ -21,7 +21,11 @@
                 <li class="uk-active"><a style="font-size: 18px; text-transform:none"
                         href="{{ .URL | relURL }}">{{.Name}}</a></li>
                 {{else}}
+                {{if eq .Params.download true}}
+                <li><a style="font-size: 18px; text-transform: none" href="{{ .URL | relURL }}" download>{{.Name}}</a></li>
+                {{else}}
                 <li><a style="font-size: 18px; text-transform: none" href="{{ .URL | relURL }}">{{.Name}}</a></li>
+                {{end}}
                 {{end}}
                 {{end}}
             </ul>
@@ -53,7 +57,11 @@
             {{if eq $aURL3 $page3}}
             <li class="uk-active"><a style="font-size: 18px" href="{{ .URL | relURL }}">{{.Name}}</a></li>
             {{else}}
+            {{if eq .Params.download true}}
+                <li><a style="font-size: 18px; text-transform: none" href="{{ .URL | relURL }}" download>{{.Name}}</a></li>
+                {{else}}
             <li><a style="font-size: 18px" href="{{ .URL | relURL }}">{{.Name}}</a></li>
+            {{end}}
             {{end}}
             {{end}}
         </ul>
