@@ -6,8 +6,15 @@
     <description>Recent content in Sam Robbins&#39; Website on Ashley Stallings</description>
     <generator>Hugo</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 14 May 2024 21:02:52 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 14 May 2024 21:20:52 -0500</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OverTheWire Bandit 1 Walkthrough</title>
+      <link>http://localhost:1313/blog/bandit-1/</link>
+      <pubDate>Tue, 14 May 2024 21:20:52 -0500</pubDate>
+      <guid>http://localhost:1313/blog/bandit-1/</guid>
+      <description>Introduction The first few challenges in Bandit are aimed at familiarizing you with the Linux command line. If you&amp;rsquo;ve used Linux before these levels will be a breeze.&#xA;Task The password for the next level is stored in a file called readme located in the home directory.&#xA;Theory man - This is a Linux command that will give you information about any other command your trying to run. It&amp;rsquo;s short for manual.</description>
+    </item>
     <item>
       <title>OverTheWire Bandit 0 Walkthrough</title>
       <link>http://localhost:1313/blog/bandit-0/</link>
