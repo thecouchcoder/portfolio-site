@@ -238,56 +238,39 @@
     <h1 class="uk-text-center uk-heading-medium">OverTheWire Bandit 1 Walkthrough</h1>
     <p class="uk-text-center uk-text-lead"></p>
     <p class="uk-text-center">Published on May 14, 2024</p>
-    <p class="uk-text-center">Reading time: 1 minutes.</p>
+    <p class="uk-text-center">Reading time: 0 minutes.</p>
     
 
     <hr class="full-width">
     
 
     <div class="content">
-      <h1 id="introduction">Introduction</h1>
-<p>The first few challenges in Bandit are aimed at familiarizing you with the Linux command line.  If you&rsquo;ve used Linux before these levels will be a breeze.</p>
-<h1 id="task">Task</h1>
-<p>The password for the next level is stored in a file called readme located in the home directory.</p>
-<h1 id="theory">Theory</h1>
-<ul>
-<li><code>man</code> - This is a Linux command that will give you information about any other command your trying to run.  It&rsquo;s short for <code>manual</code>.  Try typing <code>man ls</code> and see what happens (you can press q to quit).</li>
-<li><code>ls</code> - lists the contents of the current directory</li>
-<li><code>cat</code> - prints file contents to standard output</li>
-</ul>
+      <h1 id="task">Task</h1>
+<p>Locate the password in a file called <code>-</code></p>
 <h1 id="solution">Solution</h1>
-<p>You should still be logged in from Level 0<br>
-Since it says the file should be located in this directory let&rsquo;s try looking for it\</p>
+<p>We can begin by using what we learned about <code>cat</code> in the last level.</p>
 <div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>bandit0@bandit:~$ ls
-</span></span><span style="display:flex;"><span>readme
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat -
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>Now that we see it&rsquo;s there, let&rsquo;s try printing it&rsquo;s contents\</p>
+</div><p>That definitely didn&rsquo;t work. Click <code>ctrl+c</code> if you&rsquo;re stuck.<br>
+So what&rsquo;s going on?  If you read <code>man cat</code>, you can see it says that <code>cat -</code> will read from standard input.<br>
+Well that&rsquo;s not what we want to do.  So a bit of googling and you&rsquo;ll find that you need to specify the full path.\</p>
 <div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>bandit0@bandit:~$ cat readme
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>bandit1@bandit:~$ cat ./-
 </span></span><span style="display:flex;"><span><span style="color:#2c5dcd">(</span>redacted-password<span style="color:#2c5dcd">)</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#2c5dcd;font-weight:bold">public</span> <span style="color:#2c5dcd;font-weight:bold">class</span> <span style="text-decoration:underline">MyClass</span>{}
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Success! We found the password! It&rsquo;s against the rules of the game to share the passwords, so I&rsquo;ll redact it in all output.  Let&rsquo;s move on</p>
+</div><p>Success! There&rsquo;s the password! Time for level 2!</p>
 
     </div>
   </div>

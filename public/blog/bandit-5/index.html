@@ -235,7 +235,7 @@
 
 <section>
   <div class="uk-container uk-margin-large-bottom uk-margin-medium-top">
-    <h1 class="uk-text-center uk-heading-medium">OverTheWire Bandit 0 Walkthrough</h1>
+    <h1 class="uk-text-center uk-heading-medium">OverTheWire Bandit 5 Walkthrough</h1>
     <p class="uk-text-center uk-text-lead"></p>
     <p class="uk-text-center">Published on May 14, 2024</p>
     <p class="uk-text-center">Reading time: 1 minutes.</p>
@@ -248,46 +248,94 @@
       <h1 id="introduction">Introduction</h1>
 <p>This post is part of a series walking through OverTheWire Bandit.  You many want to start at the <a href="http://localhost:1313/blog/bandit-start/">beginning of the series</a>.  The posts are my unedited, informal thought process while solving levels.</p>
 <h1 id="task">Task</h1>
-<p>The first few challenges in Bandit are aimed at familiarizing you with the Linux command line.  If you&rsquo;ve used Linux before these levels will be a breeze. The password for the next level is stored in a file called readme located in the home directory.</p>
+<p>Find the password in a file in the <code>inhere</code> directory with the following properties\</p>
+<ul>
+<li>human-readable</li>
+<li>1033 bytes in size</li>
+<li>not executable</li>
+</ul>
 <h1 id="theory">Theory</h1>
 <ul>
-<li><code>man</code> - This is a Linux command that will give you information about any other command your trying to run.  It&rsquo;s short for <code>manual</code>.  Try typing <code>man ls</code> and see what happens (you can press q to quit).</li>
-<li><code>ls</code> - lists the contents of the current directory</li>
-<li><code>cat</code> - prints file contents to standard output</li>
+<li><code>find</code> - searches files in a directory hierachy.  There are alot of different options</li>
 </ul>
 <h1 id="solution">Solution</h1>
-<p>You should still be logged in from Level 0<br>
-Since it says the file should be located in this directory let&rsquo;s try looking for it\</p>
+<p>Let&rsquo;s start by using what we learned in the last level</p>
 <div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>bandit0@bandit:~$ ls
-</span></span><span style="display:flex;"><span>readme
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>bandit5@bandit:~$ <span style="color:#5918bb;font-weight:bold">cd</span> inhere/
+</span></span><span style="display:flex;"><span>bandit5@bandit:~/inhere$ file ./*
+</span></span><span style="display:flex;"><span>./maybehere00: directory
+</span></span><span style="display:flex;"><span>./maybehere01: directory
+</span></span><span style="display:flex;"><span>./maybehere02: directory
+</span></span><span style="display:flex;"><span>./maybehere03: directory
+</span></span><span style="display:flex;"><span>./maybehere04: directory
+</span></span><span style="display:flex;"><span>./maybehere05: directory
+</span></span><span style="display:flex;"><span>./maybehere06: directory
+</span></span><span style="display:flex;"><span>./maybehere07: directory
+</span></span><span style="display:flex;"><span>./maybehere08: directory
+</span></span><span style="display:flex;"><span>./maybehere09: directory
+</span></span><span style="display:flex;"><span>./maybehere10: directory
+</span></span><span style="display:flex;"><span>./maybehere11: directory
+</span></span><span style="display:flex;"><span>./maybehere12: directory
+</span></span><span style="display:flex;"><span>./maybehere13: directory
+</span></span><span style="display:flex;"><span>./maybehere14: directory
+</span></span><span style="display:flex;"><span>./maybehere15: directory
+</span></span><span style="display:flex;"><span>./maybehere16: directory
+</span></span><span style="display:flex;"><span>./maybehere17: directory
+</span></span><span style="display:flex;"><span>./maybehere18: directory
+</span></span><span style="display:flex;"><span>./maybehere19: directory
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>Now that we see it&rsquo;s there, let&rsquo;s try printing it&rsquo;s contents\</p>
+</div><p>Okay that&rsquo;s problematic.  We have a ton of directories, and if we look further each one has a bunch of files.  We need a better way to search through a bunch of directories at once.<br>
+Enter the find command.  It will search through an entire hierarchy of directories and has alot of different options that can be passed.  We can use the <code>-executable</code> flag to search for exectuables in conjunction with the <code>!</code> operator to negate it.</p>
+<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>bandit5@bandit:~/inhere$ find ! -executable
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Unfortunately, this returns alot of results.  Let&rsquo;s try also using the <code>-size</code> filter.  We just need to pass the number and then <code>c</code> to specify bytes.</p>
 <div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>bandit0@bandit:~$ cat readme
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>bandit5@bandit:~/inhere$ find ! -executable -size 1033c
+</span></span><span style="display:flex;"><span>./maybehere07/.file2
+</span></span><span style="display:flex;"><span>bandit5@bandit:~/inhere$ cat ./maybehere07/.file2
 </span></span><span style="display:flex;"><span><span style="color:#2c5dcd">(</span>redacted-password<span style="color:#2c5dcd">)</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#2c5dcd;font-weight:bold">public</span> <span style="color:#2c5dcd;font-weight:bold">class</span> <span style="text-decoration:underline">MyClass</span>{}
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Success! We found the password! It&rsquo;s against the rules of the game to share the passwords, so I&rsquo;ll redact it in all output. You can type <code>exit</code> to leave the SSH session. Let&rsquo;s move on</p>
+</div><p>That did the trick!</p>
 
     </div>
   </div>

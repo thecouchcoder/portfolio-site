@@ -1,7 +1,6 @@
 +++
 title = 'OverTheWire Bandit 1 Walkthrough'
 date = 2024-05-14T21:36:04-05:00
-draft = true
 +++
 
 # Task

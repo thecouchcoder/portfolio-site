@@ -1,8 +1,10 @@
 +++
 title = 'OverTheWire Bandit 3 Walkthrough'
 date = 2024-05-14T21:46:44-05:00
-draft = true
 +++
+
+# Introduction
+This post is part of a series walking through OverTheWire Bandit.  You many want to start at the [beginning of the series]({{<ref "bandit-start">}}).  The posts are my unedited, informal thought process while solving levels. 
 
 # Task
 Find the password in the hidden file in the directory called `inhere`

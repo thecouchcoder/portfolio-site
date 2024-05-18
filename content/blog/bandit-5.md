@@ -1,8 +1,10 @@
 +++
 title = 'OverTheWire Bandit 5 Walkthrough'
 date = 2024-05-14T21:59:53-05:00
-draft = true
 +++
+
+# Introduction
+This post is part of a series walking through OverTheWire Bandit.  You many want to start at the [beginning of the series]({{<ref "bandit-start">}}).  The posts are my unedited, informal thought process while solving levels. 
 
 # Task
 Find the password in a file in the `inhere` directory with the following properties\

@@ -235,7 +235,7 @@
 
 <section>
   <div class="uk-container uk-margin-large-bottom uk-margin-medium-top">
-    <h1 class="uk-text-center uk-heading-medium">OverTheWire Bandit 0 Walkthrough</h1>
+    <h1 class="uk-text-center uk-heading-medium">OverTheWire Bandit</h1>
     <p class="uk-text-center uk-text-lead"></p>
     <p class="uk-text-center">Published on May 14, 2024</p>
     <p class="uk-text-center">Reading time: 1 minutes.</p>
@@ -246,48 +246,30 @@
 
     <div class="content">
       <h1 id="introduction">Introduction</h1>
-<p>This post is part of a series walking through OverTheWire Bandit.  You many want to start at the <a href="http://localhost:1313/blog/bandit-start/">beginning of the series</a>.  The posts are my unedited, informal thought process while solving levels.</p>
+<p>If you have an interest in cybersecurity, you&rsquo;ve probably heard of Capture the Flag.  Capture the Flag, or CTF for short, is a cybersecurity challenges to help you improve your skills.  Participants are challenged to find a &ldquo;flag&rdquo; (usually a simple text string), which are hidden somewhere on the vulenerable server.  <a href="https://overthewire.org/wargames/">OverTheWire.org</a> is a website that hosts free challenges that teaches beginners the basics of CTF.  It is organized into different &ldquo;war games&rdquo;, each with levels that increase in difficulty.  The recommended place to start is with their game called <a href="https://overthewire.org/wargames/bandit/">Bandit</a>, which is aimed at absolute beginners. I have been fascinated by CTF since learning about it in college, so I have decided to finally dive into Bandit. The purpose of these write ups is to help me solidify my knowledge and understanding as I progress.</p>
+<h1 id="chapters">Chapters</h1>
+<p><a href="http://localhost:1313/blog/bandit-0/">Level 0</a><br>
+<a href="http://localhost:1313/blog/bandit-1/">Level 1</a><br>
+<a href="http://localhost:1313/blog/bandit-2/">Level 2</a><br>
+<a href="http://localhost:1313/blog/bandit-3/">Level 3</a><br>
+<a href="http://localhost:1313/blog/bandit-4/">Level 4</a><br>
+<a href="http://localhost:1313/blog/bandit-5/">Level 5</a><br>
+<a href="http://localhost:1313/blog/bandit-6/">Level 6</a>\</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <h1 id="task">Task</h1>
-<p>The first few challenges in Bandit are aimed at familiarizing you with the Linux command line.  If you&rsquo;ve used Linux before these levels will be a breeze. The password for the next level is stored in a file called readme located in the home directory.</p>
-<h1 id="theory">Theory</h1>
-<ul>
-<li><code>man</code> - This is a Linux command that will give you information about any other command your trying to run.  It&rsquo;s short for <code>manual</code>.  Try typing <code>man ls</code> and see what happens (you can press q to quit).</li>
-<li><code>ls</code> - lists the contents of the current directory</li>
-<li><code>cat</code> - prints file contents to standard output</li>
-</ul>
+<p>The goal of this level is for you to log into the game using SSH<br>
+Server: bandit.labs.overthewire.org<br>
+Port: 2220<br>
+Username: bandit0<br>
+Password: bandit0\</p>
 <h1 id="solution">Solution</h1>
-<p>You should still be logged in from Level 0<br>
-Since it says the file should be located in this directory let&rsquo;s try looking for it\</p>
-<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>bandit0@bandit:~$ ls
-</span></span><span style="display:flex;"><span>readme
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Now that we see it&rsquo;s there, let&rsquo;s try printing it&rsquo;s contents\</p>
-<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>bandit0@bandit:~$ cat readme
-</span></span><span style="display:flex;"><span><span style="color:#2c5dcd">(</span>redacted-password<span style="color:#2c5dcd">)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#2c5dcd;font-weight:bold">public</span> <span style="color:#2c5dcd;font-weight:bold">class</span> <span style="text-decoration:underline">MyClass</span>{}
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Success! We found the password! It&rsquo;s against the rules of the game to share the passwords, so I&rsquo;ll redact it in all output. You can type <code>exit</code> to leave the SSH session. Let&rsquo;s move on</p>
+<p>To start Bandit, you need to login.  They want you to connect via SSH (Secure Shell Protocol), which is a way to remotely connect to another computer SSH is a UNIX program, so to use it on Windows you&rsquo;ll need to install an SSH client like Cygwin or Putty.  I will use WSL since SSH is preinstalled.  Logging in with SSH is as simple as<br>
+<code>ssh &lt;username&gt;@&lt;server&gt; -p &lt;port&gt;</code><br>
+so in our case we can use<br>
+<code>ssh bandit0@bandit.labs.overthewire.org -p 2220</code><br>
+enter the password and congratulations you have beat level 0!</p>
+<p>You&rsquo;ll want to make sure you memorize this command because you&rsquo;ll be using it on every subsequent level to login.</p>
 
     </div>
   </div>

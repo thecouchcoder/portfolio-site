@@ -2,10 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/blog/bandit-6/</loc>
+    <lastmod>2024-05-14T22:28:23-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/bandit-5/</loc>
+    <lastmod>2024-05-14T21:59:53-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/bandit-4/</loc>
+    <lastmod>2024-05-14T21:53:08-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/bandit-3/</loc>
+    <lastmod>2024-05-14T21:46:44-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/bandit-2/</loc>
+    <lastmod>2024-05-14T21:40:55-05:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/blog/bandit-1/</loc>
-    <lastmod>2024-05-14T21:20:52-05:00</lastmod>
+    <lastmod>2024-05-14T21:36:04-05:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/bandit-0/</loc>
+    <lastmod>2024-05-14T21:20:52-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/bandit-start/</loc>
     <lastmod>2024-05-14T21:02:52-05:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/cgoless-sqlite/</loc>

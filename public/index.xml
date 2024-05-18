@@ -6,21 +6,63 @@
     <description>Recent content in Sam Robbins&#39; Website on Ashley Stallings</description>
     <generator>Hugo</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 14 May 2024 21:20:52 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 14 May 2024 22:28:23 -0500</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OverTheWire Bandit 5 Walkthrough</title>
+      <link>http://localhost:1313/blog/bandit-6/</link>
+      <pubDate>Tue, 14 May 2024 22:28:23 -0500</pubDate>
+      <guid>http://localhost:1313/blog/bandit-6/</guid>
+      <description>Introduction This post is part of a series walking through OverTheWire Bandit. You many want to start at the beginning of the series. The posts are my unedited, informal thought process while solving levels.&#xA;Task Find the password somewhere on the server with the following properties\&#xA;owned by user bandit7 owned by group bandit6 33 bytes in size Theory pwd - print the name of the current directory /dev/null - anything written to here will be discarded Solution Let&amp;rsquo;s start out by seeing what we have to work with and then using our find command from the last level</description>
+    </item>
+    <item>
+      <title>OverTheWire Bandit 5 Walkthrough</title>
+      <link>http://localhost:1313/blog/bandit-5/</link>
+      <pubDate>Tue, 14 May 2024 21:59:53 -0500</pubDate>
+      <guid>http://localhost:1313/blog/bandit-5/</guid>
+      <description>Introduction This post is part of a series walking through OverTheWire Bandit. You many want to start at the beginning of the series. The posts are my unedited, informal thought process while solving levels.&#xA;Task Find the password in a file in the inhere directory with the following properties\&#xA;human-readable 1033 bytes in size not executable Theory find - searches files in a directory hierachy. There are alot of different options Solution Let&amp;rsquo;s start by using what we learned in the last level</description>
+    </item>
+    <item>
+      <title>OverTheWire Bandit 3 Walkthrough</title>
+      <link>http://localhost:1313/blog/bandit-4/</link>
+      <pubDate>Tue, 14 May 2024 21:53:08 -0500</pubDate>
+      <guid>http://localhost:1313/blog/bandit-4/</guid>
+      <description>Introduction This post is part of a series walking through OverTheWire Bandit. You many want to start at the beginning of the series. The posts are my unedited, informal thought process while solving levels.&#xA;Task Find the password in the only human-readable file in the inhere directory&#xA;Theory file will tell us the file type Solution This one starts off a little weird. What do they mean by human readable file?</description>
+    </item>
+    <item>
+      <title>OverTheWire Bandit 3 Walkthrough</title>
+      <link>http://localhost:1313/blog/bandit-3/</link>
+      <pubDate>Tue, 14 May 2024 21:46:44 -0500</pubDate>
+      <guid>http://localhost:1313/blog/bandit-3/</guid>
+      <description>Introduction This post is part of a series walking through OverTheWire Bandit. You many want to start at the beginning of the series. The posts are my unedited, informal thought process while solving levels.&#xA;Task Find the password in the hidden file in the directory called inhere&#xA;Theory cd allows us to navigate between directories ls has a flag -a to show files that start with . Solution Let&amp;rsquo;s start by getting a lay of the land</description>
+    </item>
+    <item>
+      <title>OverTheWire Bandit 2 Walkthrough</title>
+      <link>http://localhost:1313/blog/bandit-2/</link>
+      <pubDate>Tue, 14 May 2024 21:40:55 -0500</pubDate>
+      <guid>http://localhost:1313/blog/bandit-2/</guid>
+      <description>Introduction This post is part of a series walking through OverTheWire Bandit. You many want to start at the beginning of the series. The posts are my unedited, informal thought process while solving levels.&#xA;Task This time we need to find the password in a file called spaces in this filename&#xA;Solution Another one that&amp;rsquo;s not to bad. We just need to utilize what we learned in the level 1 and use quotes when we specify the file name.</description>
+    </item>
     <item>
       <title>OverTheWire Bandit 1 Walkthrough</title>
       <link>http://localhost:1313/blog/bandit-1/</link>
-      <pubDate>Tue, 14 May 2024 21:20:52 -0500</pubDate>
+      <pubDate>Tue, 14 May 2024 21:36:04 -0500</pubDate>
       <guid>http://localhost:1313/blog/bandit-1/</guid>
-      <description>Introduction The first few challenges in Bandit are aimed at familiarizing you with the Linux command line. If you&amp;rsquo;ve used Linux before these levels will be a breeze.&#xA;Task The password for the next level is stored in a file called readme located in the home directory.&#xA;Theory man - This is a Linux command that will give you information about any other command your trying to run. It&amp;rsquo;s short for manual.</description>
+      <description>Task Locate the password in a file called -&#xA;Solution We can begin by using what we learned about cat in the last level.&#xA;1 cat - That definitely didn&amp;rsquo;t work. Click ctrl+c if you&amp;rsquo;re stuck.&#xA;So what&amp;rsquo;s going on? If you read man cat, you can see it says that cat - will read from standard input.&#xA;Well that&amp;rsquo;s not what we want to do. So a bit of googling and you&amp;rsquo;ll find that you need to specify the full path.</description>
     </item>
     <item>
       <title>OverTheWire Bandit 0 Walkthrough</title>
       <link>http://localhost:1313/blog/bandit-0/</link>
-      <pubDate>Tue, 14 May 2024 21:02:52 -0500</pubDate>
+      <pubDate>Tue, 14 May 2024 21:20:52 -0500</pubDate>
       <guid>http://localhost:1313/blog/bandit-0/</guid>
-      <description>Introduction If you have an interest in cybersecurity, you&amp;rsquo;ve probably heard of Capture the Flag. Capture the Flag, or CTF for short, is a cybersecurity game played by those who want to improve their skills. Participants are challenged to find a &amp;ldquo;flag&amp;rdquo; (usually a simple text string), which are hidden somewhere on the vulenerable server , via exploits. OverTheWire.org is a website that hosts free challenges that teaches beginners the basics of CTF.</description>
+      <description>Introduction This post is part of a series walking through OverTheWire Bandit. You many want to start at the beginning of the series. The posts are my unedited, informal thought process while solving levels.&#xA;Task The first few challenges in Bandit are aimed at familiarizing you with the Linux command line. If you&amp;rsquo;ve used Linux before these levels will be a breeze. The password for the next level is stored in a file called readme located in the home directory.</description>
+    </item>
+    <item>
+      <title>OverTheWire Bandit</title>
+      <link>http://localhost:1313/blog/bandit-start/</link>
+      <pubDate>Tue, 14 May 2024 21:02:52 -0500</pubDate>
+      <guid>http://localhost:1313/blog/bandit-start/</guid>
+      <description>Introduction If you have an interest in cybersecurity, you&amp;rsquo;ve probably heard of Capture the Flag. Capture the Flag, or CTF for short, is a cybersecurity challenges to help you improve your skills. Participants are challenged to find a &amp;ldquo;flag&amp;rdquo; (usually a simple text string), which are hidden somewhere on the vulenerable server. OverTheWire.org is a website that hosts free challenges that teaches beginners the basics of CTF. It is organized into different &amp;ldquo;war games&amp;rdquo;, each with levels that increase in difficulty.</description>
     </item>
     <item>
       <title>SQLite Without CGO</title>

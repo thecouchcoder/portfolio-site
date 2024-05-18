@@ -4,10 +4,10 @@ date = 2024-05-14T21:20:52-05:00
 +++
 
 # Introduction
-The first few challenges in Bandit are aimed at familiarizing you with the Linux command line.  If you've used Linux before these levels will be a breeze.
+This post is part of a series walking through OverTheWire Bandit.  You many want to start at the [beginning of the series]({{<ref "bandit-start">}}).  The posts are my unedited, informal thought process while solving levels. 
 
 # Task
-The password for the next level is stored in a file called readme located in the home directory.
+The first few challenges in Bandit are aimed at familiarizing you with the Linux command line.  If you've used Linux before these levels will be a breeze. The password for the next level is stored in a file called readme located in the home directory.
 
 # Theory
 - `man` - This is a Linux command that will give you information about any other command your trying to run.  It's short for `manual`.  Try typing `man ls` and see what happens (you can press q to quit).

@@ -235,10 +235,10 @@
 
 <section>
   <div class="uk-container uk-margin-large-bottom uk-margin-medium-top">
-    <h1 class="uk-text-center uk-heading-medium">OverTheWire Bandit 0 Walkthrough</h1>
+    <h1 class="uk-text-center uk-heading-medium">OverTheWire Bandit 5 Walkthrough</h1>
     <p class="uk-text-center uk-text-lead"></p>
     <p class="uk-text-center">Published on May 14, 2024</p>
-    <p class="uk-text-center">Reading time: 1 minutes.</p>
+    <p class="uk-text-center">Reading time: 2 minutes.</p>
     
 
     <hr class="full-width">
@@ -248,46 +248,98 @@
       <h1 id="introduction">Introduction</h1>
 <p>This post is part of a series walking through OverTheWire Bandit.  You many want to start at the <a href="http://localhost:1313/blog/bandit-start/">beginning of the series</a>.  The posts are my unedited, informal thought process while solving levels.</p>
 <h1 id="task">Task</h1>
-<p>The first few challenges in Bandit are aimed at familiarizing you with the Linux command line.  If you&rsquo;ve used Linux before these levels will be a breeze. The password for the next level is stored in a file called readme located in the home directory.</p>
+<p>Find the password <strong>somewhere on the server</strong> with the following properties\</p>
+<ul>
+<li>owned by user bandit7</li>
+<li>owned by group bandit6</li>
+<li>33 bytes in size</li>
+</ul>
 <h1 id="theory">Theory</h1>
 <ul>
-<li><code>man</code> - This is a Linux command that will give you information about any other command your trying to run.  It&rsquo;s short for <code>manual</code>.  Try typing <code>man ls</code> and see what happens (you can press q to quit).</li>
-<li><code>ls</code> - lists the contents of the current directory</li>
-<li><code>cat</code> - prints file contents to standard output</li>
+<li>pwd - print the name of the current directory</li>
+<li>/dev/null - anything written to here will be discarded</li>
 </ul>
 <h1 id="solution">Solution</h1>
-<p>You should still be logged in from Level 0<br>
-Since it says the file should be located in this directory let&rsquo;s try looking for it\</p>
+<p>Let&rsquo;s start out by seeing what we have to work with and then using our find command from the last level</p>
+<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>bandit6@bandit:~$ ls -a
+</span></span><span style="display:flex;"><span>.  ..  .bash_logout  .bashrc  .profile
+</span></span><span style="display:flex;"><span>bandit6@bandit:~$ find -size 33c
+</span></span><span style="display:flex;"><span>bandit6@bandit:~$
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Nothing&hellip; they did mention explicitly that the password would be <strong>somewhere on the server</strong><br>
+Let&rsquo;s try navigating <strong>backwards</strong> and figuring out where we are.</p>
+<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>bandit6@bandit:~$ <span style="color:#5918bb;font-weight:bold">cd</span> ../
+</span></span><span style="display:flex;"><span>bandit6@bandit:/home$ ls
+</span></span><span style="display:flex;"><span>bandit0   bandit15  bandit21  bandit27-git  bandit30-git  bandit6    drifter12  drifter5     formulaone2  krypton4
+</span></span><span style="display:flex;"><span>bandit1   bandit16  bandit22  bandit28      bandit31      bandit7    drifter13  drifter6     formulaone3  krypton5
+</span></span><span style="display:flex;"><span>bandit10  bandit17  bandit23  bandit28-git  bandit31-git  bandit8    drifter14  drifter7     formulaone5  krypton6
+</span></span><span style="display:flex;"><span>bandit11  bandit18  bandit24  bandit29      bandit32      bandit9    drifter15  drifter8     formulaone6  krypton7
+</span></span><span style="display:flex;"><span>bandit12  bandit19  bandit25  bandit29-git  bandit33      drifter0   drifter2   drifter9     krypton1     ubuntu
+</span></span><span style="display:flex;"><span>bandit13  bandit2   bandit26  bandit3       bandit4       drifter1   drifter3   formulaone0  krypton2
+</span></span><span style="display:flex;"><span>bandit14  bandit20  bandit27  bandit30      bandit5       drifter10  drifter4   formulaone1  krypton3
+</span></span><span style="display:flex;"><span>bandit6@bandit:/home$ <span style="color:#5918bb;font-weight:bold">pwd</span>
+</span></span><span style="display:flex;"><span>/home
+</span></span><span style="display:flex;"><span>bandit6@bandit:/home$ <span style="color:#5918bb;font-weight:bold">cd</span> ../
+</span></span><span style="display:flex;"><span>bandit6@bandit:/$ <span style="color:#5918bb;font-weight:bold">pwd</span>
+</span></span><span style="display:flex;"><span>/
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Okay great! Navigating back shows we have alot of places to search. Let&rsquo;s rerun our find command, but this time specifying some additional flags</p>
+<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>bandit6@bandit:/$ find -group bandit6 -user bandit7 -size 33c
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Yikes! Lot&rsquo;s of permission denied&hellip;<br>
+We can utilize /dev/null to get rid of these errors.  Linux commands have 2 streams</p>
+<ol>
+<li>Standard output</li>
+<li>Standard error
+We can access them using
+<code>1&gt;stdout.txt</code> which will write whatever would be output on standard out to the text file stdout.txt</li>
+</ol>
+<p>Let&rsquo;s utilize this info to get rid of the permission errors</p>
 <div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>bandit0@bandit:~$ ls
-</span></span><span style="display:flex;"><span>readme
+<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>bandit6@bandit:/$ find -group bandit6 -user bandit7 -size 33c 2&gt;/dev/null
+</span></span><span style="display:flex;"><span>./var/lib/dpkg/info/bandit7.password
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>Now that we see it&rsquo;s there, let&rsquo;s try printing it&rsquo;s contents\</p>
-<div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>bandit0@bandit:~$ cat readme
-</span></span><span style="display:flex;"><span><span style="color:#2c5dcd">(</span>redacted-password<span style="color:#2c5dcd">)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><div class="highlight"><div style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#2c5dcd;font-weight:bold">public</span> <span style="color:#2c5dcd;font-weight:bold">class</span> <span style="text-decoration:underline">MyClass</span>{}
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Success! We found the password! It&rsquo;s against the rules of the game to share the passwords, so I&rsquo;ll redact it in all output. You can type <code>exit</code> to leave the SSH session. Let&rsquo;s move on</p>
+</div><p>Now we&rsquo;ve found the password.  Let&rsquo;s keep going</p>
 
     </div>
   </div>
