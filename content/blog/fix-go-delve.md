@@ -1,7 +1,6 @@
 +++
-title = 'Fix Go Delve Issues'
+title = 'Fix M1 Mac Go Delve Issues'
 date = 2024-05-18T15:48:26-05:00
-draft: false
 +++
 
 # Introduction

@@ -6,8 +6,15 @@
     <description>Recent content in Sam Robbins&#39; Website on Ashley Stallings</description>
     <generator>Hugo</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 14 May 2024 22:28:23 -0500</lastBuildDate>
+    <lastBuildDate>Sat, 18 May 2024 15:48:26 -0500</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fix M1 Mac Go Delve Issues</title>
+      <link>http://localhost:1313/blog/fix-go-delve/</link>
+      <pubDate>Sat, 18 May 2024 15:48:26 -0500</pubDate>
+      <guid>http://localhost:1313/blog/fix-go-delve/</guid>
+      <description>Introduction I recently upgraded to the lastest Go version on my M1 Mac and suddenly was unable to debug my code in VSCode. Using the debugger resulted in the error error:could not launch process: can not run under Rosetta, check that the installed build of Go is right for your CPU architecture. Let&amp;rsquo;s dive into this issue and figure out how to fix it.&#xA;Explanation The error message say that the Go build is for the wrong architecture.</description>
+    </item>
     <item>
       <title>OverTheWire Bandit 5 Walkthrough</title>
       <link>http://localhost:1313/blog/bandit-6/</link>
