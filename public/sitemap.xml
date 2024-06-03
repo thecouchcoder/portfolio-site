@@ -2,6 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/blog/bandit-8/</loc>
+    <lastmod>2024-06-02T16:44:46-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/bandit-7/</loc>
+    <lastmod>2024-06-02T16:34:40-05:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/blog/fix-go-delve/</loc>
     <lastmod>2024-05-18T15:48:26-05:00</lastmod>
   </url><url>

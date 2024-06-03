@@ -6,8 +6,22 @@
     <description>Recent content in Blog on Ashley Stallings</description>
     <generator>Hugo</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 18 May 2024 15:48:26 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 02 Jun 2024 16:44:46 -0500</lastBuildDate>
     <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OverTheWire Bandit 8 Walkthrough</title>
+      <link>http://localhost:1313/blog/bandit-8/</link>
+      <pubDate>Sun, 02 Jun 2024 16:44:46 -0500</pubDate>
+      <guid>http://localhost:1313/blog/bandit-8/</guid>
+      <description>Introduction This post is part of a series walking through OverTheWire Bandit. You many want to start at the beginning of the series. The posts are my unedited, informal thought process while solving levels.&#xA;Task The password for the next level is stored in the file data.txt and is the only line of text that occurs only once&#xA;Theory uniq - report or omit repeated lines sort - sort lines of a text file Solution Admittedly, these two commands are both new to me.</description>
+    </item>
+    <item>
+      <title>OverTheWire Bandit 7 Walkthrough</title>
+      <link>http://localhost:1313/blog/bandit-7/</link>
+      <pubDate>Sun, 02 Jun 2024 16:34:40 -0500</pubDate>
+      <guid>http://localhost:1313/blog/bandit-7/</guid>
+      <description>Introduction This post is part of a series walking through OverTheWire Bandit. You many want to start at the beginning of the series. The posts are my unedited, informal thought process while solving levels.&#xA;Task The password for the next level is stored in the file data.txt next to the word millionth&#xA;Theory grep - print a line that matches a pattern | - also known as &amp;ldquo;pipe&amp;rdquo;, send the output of one command as the input of another Solution Even if you get nothing else out of doing OverTheWire, you should make sure you know how to grep.</description>
+    </item>
     <item>
       <title>Fix M1 Mac Go Delve Issues</title>
       <link>http://localhost:1313/blog/fix-go-delve/</link>
