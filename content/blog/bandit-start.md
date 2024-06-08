@@ -18,10 +18,10 @@ If you have an interest in cybersecurity, you've probably heard of Capture the F
 [Level 7]({{<ref "bandit-7">}})\
 [Level 8]({{<ref "bandit-8">}})
 [Level 9]({{<ref "bandit-9">}})
-<!-- [Level 10]({{<ref "bandit-10">}})
+[Level 10]({{<ref "bandit-10">}})
 [Level 11]({{<ref "bandit-11">}})
 [Level 12]({{<ref "bandit-12">}})
-[Level 13]({{<ref "bandit-13">}})
+<!-- [Level 13]({{<ref "bandit-13">}})
 [Level 14]({{<ref "bandit-14">}})
 [Level 15]({{<ref "bandit-15">}})
 [Level 16]({{<ref "bandit-16">}})
