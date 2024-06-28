@@ -2,7 +2,7 @@
 baseURL = "https://thecouchcoder.github.io"
 languageCode = "en-US"
 title = "Ashley Stallings"
-googleAnalytics = ""
+googleAnalytics = "G-B44NGC9GQN"
 
 [module]
   [[module.imports]]
