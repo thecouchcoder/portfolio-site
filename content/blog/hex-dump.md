@@ -69,7 +69,7 @@ Protobuf, short for Protocol Buffers, is a method for serializing structured dat
 
 ## Viewing a Protobuf Object with Hex Dump
 
-Let's consider an example where we have a Protobuf object defined as follows(in a`example.proto` file:
+Let's consider an example where we have a Protobuf object defined as follows in `example.proto` file:
 
 ```protobuf
 syntax = "proto3";
