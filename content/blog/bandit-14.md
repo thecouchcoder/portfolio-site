@@ -1,6 +1,6 @@
 +++
 title = 'OverTheWire Bandit 14 Walkthrough'
-date = 2024-07-01T07:41:02-05:00
+date = 2024-07-01T21:44:15-05:00
 +++
 
 # Introduction
@@ -9,36 +9,38 @@ This post is part of a series walking through OverTheWire Bandit. You many want 
 
 # Task
 
-The password for the next level is stored in /etc/bandit_pass/bandit14 and can only be read by user bandit14. For this level, you don’t get the next password, but you get a private SSH key that can be used to log into the next level. Note: localhost is a hostname that refers to the machine you are working on
+The password for the next level can be retrieved by submitting the password of the current level to port 30000 on localhost.
 
 # Theory
 
-SSH
-Public/Private Key Encription
+- `nmap` - Network exploration tool and security / port scanner
 
 # Solution
 
-This is another tough one. We know where the password is, but we can't read it. There is a private SSH Key we can use to log into the next level instead.
+Start by going through the provided resources, since they are a really good introduction to basic computer networking principles. When I saw the task I immediately knew I was going to need nmap, because I have used it before to scan my network in the past. We need to use nmap to figure out what protocol is being exposed on port 30000 and then use one of the other listed commands to actually connect. After looking at the man page I ran
 
-You should be familiar with SSH, since that's how we've logged into every previous level. Bandit links us to a helpful article that goes into alot more detail about SSH and talks about how there is actually 2 ways to login into SSH - password or public/private key. If you're not familiar with public/private key encryption, now is probably a good time to go watch a video or find an article explaining it. I've worked with it in the past, so I was familiar already.
-
-So one thing we learn from the article and the man page, is that SSH is going to look for our private key at ~/.ssh . When we log into Bandit 13 we see there is a private key in our current directory `/home/bandit13`. I started out by trying to navigate to the `.ssh` directory, but it doesn't exist and when you try to create it, you don't have permissions. So I did a quick Google to see if it's possible to specify a different location for where you private key will be, and it turns out that's exactly what the `-i` flag does.
-
-I was fairly confident I could SSH in now, so I entered
-
-```bash
-ssh -i sshkey.private bandit14@localhost
-
-bandit14@localhost: Permission denied (publickey).
+```
+nmap -p 30000 localhost
 ```
 
-But as you can see, I was denied. I got stuck here and couldn't figure out why. I was confident I was SSHing in correctly, but eventually I came across an old post where someone else was having the same exact issue with this level and the responder pointed out that Bandit exposes SSH over port 2220 isntead of the default 22. I should have known that because every level logged into so far has used `-p 2220` as an option.
+Nmap shows that the port is running TCP. The most interesting part of the man page for `nc` (which is used for TCP connections) is
 
-So trying again
+```
+It is quite simple to build a very basic client/server model using nc.  On one console, start nc  listen‐
+       ing on a specific port for a connection.  For example:
 
-```bash
-ssh -i sshkey.private bandit14@localhost -p 2220
-cat ../../etc/bandit_pass/bandit14
+             $ nc -l 1234
+
+       nc is now listening on port 1234 for a connection.  On a second console (or a second machine), connect to
+       the machine and port being listened on:
+
+             $ nc -N 127.0.0.1 1234
+
+       There  should  now  be a connection between the ports.  Anything typed at the second console will be con‐
+       catenated to the first, and vice-versa.
 ```
 
-Just like that, since we successfully SSH-d into the server, we can cat the password from the location we know it's stored and we're done with this level.
+So next I ran
+`nc localhost 30000`
+
+This gave an empty line, which I entered this level's password into and out came the next levels password.
