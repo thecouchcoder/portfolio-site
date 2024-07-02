@@ -1,5 +1,5 @@
 +++
-title = 'Bandit 14'
+title = 'OverTheWire Bandit 14 Walkthrough'
 date = 2024-07-01T07:41:02-05:00
 +++
 
