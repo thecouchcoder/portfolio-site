@@ -13,9 +13,9 @@ The password for the next level is stored in /etc/bandit_pass/bandit14 and can o
 
 # Theory
 
-[SSL](https://www.youtube.com/watch?v=j9QmMEWmcfo)
-OpenSSL - The openssl program is a command line program for using the various cryptography functions of OpenSSL's crypto library from the shell
-s_client - according to the OpenSSL man page, This implements a generic SSL/TLS client which can establish a transparent connection to a remote server speaking SSL/TLS. It's intended for testing purposes only and provides only rudimentary interface functionality but internally uses mostly all functionality of the OpenSSL ssl library.
+[SSL](https://www.youtube.com/watch?v=j9QmMEWmcfo)\
+OpenSSL - The openssl program is a command line program for using the various cryptography functions of OpenSSL's crypto library from the shell\
+s_client - according to the OpenSSL man page, This implements a generic SSL/TLS client which can establish a transparent connection to a remote server speaking SSL/TLS. It's intended for testing purposes only and provides only rudimentary interface functionality but internally uses mostly all functionality of the OpenSSL ssl library.\
 [OpenSSL Cookbook](https://www.feistyduck.com/library/openssl-cookbook/online/testing-with-openssl/index.html)
 
 # Solution
