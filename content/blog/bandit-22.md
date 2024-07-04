@@ -21,7 +21,7 @@ We can start this on in the same way as last time
 
 ```bash
 cd ../../
-cat /etc/cron.d/chronjob_bandit23
+cat /etc/cron.d/cronjob_bandit23
 bandit22@bandit:/$ cat /etc/cron.d/cronjob_bandit23
 @reboot bandit23 /usr/bin/cronjob_bandit23.sh  &> /dev/null
 * * * * * bandit23 /usr/bin/cronjob_bandit23.sh  &> /dev/null

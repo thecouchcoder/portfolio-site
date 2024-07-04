@@ -20,7 +20,7 @@ There is a setuid binary in the homedirectory that does the following: it makes 
 
 This is a fun one. Essentially, there is a binary we can run connect to a port and expects that whatever is running their to send back the current level's password. If it does, it will send the next level's password.
 
-So we know that we need to expose a server on an arbitrary port that returns the current level's password. Then we simply need to run the binary in the home directory. We can accomplish this with `nc`. If you look at its man page you can see how to create a simple client server by running
+So we know that we need to expose a server on an arbitrary port that returns the current level's password. Then we simply need to run the binary in the home directory. We can accomplish this with `nc`. If you look at its man page you can see how to create a simple client/server by running
 `nc -l 1234`
 and
 `nc -N localhost 1234`
@@ -32,8 +32,7 @@ With this new tmux knowledge, I created a 3 pane terminal - One for the server, 
 A quick Google told me I can run commands on an nc server using the `|`, so to start the server I ran
 
 ```bash
-echo "password-here" │             $ nc -l 1234
-| nc -l 1234
+echo "password-here" | nc -l 1234
 ```
 
 Then for the client, I simply connected to that port with the binary
