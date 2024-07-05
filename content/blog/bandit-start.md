@@ -23,20 +23,21 @@ If you have an interest in cybersecurity, you've probably heard of Capture the F
 [Level 11]({{<ref "bandit-11">}})\
 [Level 12]({{<ref "bandit-12">}})\
 [Level 13]({{<ref "bandit-13">}})\
-[Level 14]({{<ref "bandit-14">}})
-
-<!-- [Level 15]({{<ref "bandit-15">}})
-[Level 16]({{<ref "bandit-16">}})
-[Level 17]({{<ref "bandit-17">}})
-[Level 18]({{<ref "bandit-18">}})
-[Level 19]({{<ref "bandit-19">}})
-[Level 20]({{<ref "bandit-20">}})
-[Level 21]({{<ref "bandit-21">}})
-[Level 22]({{<ref "bandit-22">}})
-[Level 23]({{<ref "bandit-23">}})
-[Level 24]({{<ref "bandit-24">}})
-[Level 25]({{<ref "bandit-25">}})
+[Level 14]({{<ref "bandit-14">}})\
+[Level 15]({{<ref "bandit-15">}})\
+[Level 16]({{<ref "bandit-16">}})\
+[Level 17]({{<ref "bandit-17">}})\
+[Level 18]({{<ref "bandit-18">}})\
+[Level 19]({{<ref "bandit-19">}})\
+[Level 20]({{<ref "bandit-20">}})\
+[Level 21]({{<ref "bandit-21">}})\
+[Level 22]({{<ref "bandit-22">}})\
+[Level 23]({{<ref "bandit-23">}})\
+[Level 24]({{<ref "bandit-24">}})\
+[Level 25]({{<ref "bandit-25">}})\
 [Level 26]({{<ref "bandit-26">}})
+
+<!--
 [Level 27]({{<ref "bandit-27">}})
 [Level 28]({{<ref "bandit-28">}})
 [Level 29]({{<ref "bandit-29">}})

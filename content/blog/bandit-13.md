@@ -14,7 +14,7 @@ The password for the next level is stored in /etc/bandit_pass/bandit14 and can o
 # Theory
 
 SSH
-Public/Private Key Encription
+Public/Private Key Encryption
 
 # Solution
 

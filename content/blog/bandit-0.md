@@ -35,8 +35,4 @@ bandit0@bandit:~$ cat readme
 (redacted-password)
 ```
 
-```C#
-public class MyClass{}
-```
-
 Success! We found the password! It's against the rules of the game to share the passwords, so I'll redact it in all output. You can type `exit` to leave the SSH session. Let's move on
