@@ -1,5 +1,5 @@
 +++
-title = 'Bandit 25'
+title = ' OverTheWire Bandit25'
 date = 2024-07-04T12:12:37-05:00
 +++
 
