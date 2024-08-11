@@ -26,24 +26,31 @@ googleAnalytics = "G-B44NGC9GQN"
 # navigation
 [menu]
 
+   [[menu.main]]
+     name = "Now"
+     URL = "blog/_now"
+     weight=1
+   [menu.main.params]
+       download = false
+
   [[menu.main]]
   name = "About"
   URL = "about"
-  weight=1
+  weight=2
   [menu.main.params]
     download = false
 
   [[menu.main]]
   name = "Blog"
   URL = "blog"
-  weight=2
+  weight=3
   [menu.main.params]
     download = false
 
   [[menu.main]]
   name = "Resume"
   URL = "/resume.pdf"
-  weight=3
+  weight=4
   [menu.main.params]
     download = true
 
