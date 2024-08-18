@@ -1,7 +1,6 @@
 +++
 title = 'The Curious Case of Python Class Attributes'
 date = 2024-08-17T15:07:58-05:00
-draft = true
 +++
 
 # The Curious Case of Python Class Attributes
