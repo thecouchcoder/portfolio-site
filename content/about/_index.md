@@ -24,7 +24,7 @@ This page holds ideas and sources related to topics I'm curious about. Maybe one
 - [ ] [Cloud Resume Challenge](https://cloudresumechallenge.dev/)
 - [ ] [100 Days of Devops](https://github.com/100daysofdevops)
 - [ ] AWS certification
-- [ ] [Docker](https://www.youtube.com/watch?v=3c-iBn73dDE)
+- [X] [Docker and Kubernetes](../blog/devops-primer.md)
 - [ ] [Kubernetes](https://www.edx.org/learn/kubernetes/the-linux-foundation-introduction-to-kubernetes?index=product&queryID=8e28223aaf8c8bfb69de330ce6a84725&position=1&linked_from=autocomplete&c=autocomplete)
 - [ ] [Istio](https://www.edx.org/learn/kubernetes/the-linux-foundation-introduction-to-istio?webview=false&campaign=Introduction+to+Istio&source=edx&product_category=course&placement_url=https%3A%2F%2Fwww.edx.org%2Fschool%2Flinuxfoundationx)
 - [ ] [Google API Design Documentation](https://cloud.google.com/apis/design/resources)
