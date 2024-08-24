@@ -1,5 +1,5 @@
 # Base information
-baseURL = "//thecouchcoder.github.io/portfolio-site/"
+baseURL = "https://thecouchcoder.github.io/portfolio-site/"
 languageCode = "en-US"
 title = "Ashley Stallings"
 googleAnalytics = "G-B44NGC9GQN"
