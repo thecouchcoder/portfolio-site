@@ -6,7 +6,7 @@ author: "Ashley Stallings"
 authorImage: "https://res.cloudinary.com/dhoazk5kt/image/upload/v1715656155/smallhithere_xh10aq.png"
 ---
 
-![albert-einstein-quote](/images/alberteinstein.jpg)
+![albert-einstein-quote](/alberteinstein.jpg)
 
 I'm Ashley, a software engineer at Zillow Group. I have 8+ years of experience as software engineer primarily working in C#, Python and TypeScript. I've worked both at Fortune 500 companies and startups, and most recently I've been building the platform for Zillow Home Loans, a multi million dollar business. I am endlessly curious and I am eager to take ownership of core functionality leading all the way from design to release.
 
