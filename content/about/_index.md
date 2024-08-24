@@ -6,7 +6,7 @@ author: "Ashley Stallings"
 authorImage: "https://res.cloudinary.com/dhoazk5kt/image/upload/v1715656155/smallhithere_xh10aq.png"
 ---
 
-![albert-einstein-quote](../images/alberteinstein.jpg)
+![albert-einstein-quote](/images/alberteinstein.jpg)
 
 I'm Ashley, a software engineer at Zillow Group. I have 8+ years of experience as software engineer primarily working in C#, Python and TypeScript. I've worked both at Fortune 500 companies and startups, and most recently I've been building the platform for Zillow Home Loans, a multi million dollar business. I am endlessly curious and I am eager to take ownership of core functionality leading all the way from design to release.
 
@@ -24,7 +24,7 @@ This page holds ideas and sources related to topics I'm curious about. Maybe one
 - [ ] [Cloud Resume Challenge](https://cloudresumechallenge.dev/)
 - [ ] [100 Days of Devops](https://github.com/100daysofdevops)
 - [ ] AWS certification
-- [X] [Docker and Kubernetes](../blog/devops-primer.md)
+- [X] [Docker and Kubernetes](../blog/devops-primer)
 - [ ] [Kubernetes](https://www.edx.org/learn/kubernetes/the-linux-foundation-introduction-to-kubernetes?index=product&queryID=8e28223aaf8c8bfb69de330ce6a84725&position=1&linked_from=autocomplete&c=autocomplete)
 - [ ] [Istio](https://www.edx.org/learn/kubernetes/the-linux-foundation-introduction-to-istio?webview=false&campaign=Introduction+to+Istio&source=edx&product_category=course&placement_url=https%3A%2F%2Fwww.edx.org%2Fschool%2Flinuxfoundationx)
 - [ ] [Google API Design Documentation](https://cloud.google.com/apis/design/resources)

@@ -42,4 +42,4 @@ Then for the client, I simply connected to that port with the binary
 ```
 
 Here's a screenshot of my tmux setup.
-![tmux](../images/bandit-20-tmux.png)
+![tmux](/images/bandit-20-tmux.png)
