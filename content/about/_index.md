@@ -34,6 +34,7 @@ This page holds ideas and sources related to topics I'm curious about. Maybe one
 - [ ] Concurrency vs Parallelism
 - [ ] [7 Databases in 7 weeks](https://www.amazon.com/Seven-Databases-Weeks-Modern-Movement-dp-1680502530/dp/1680502530/ref=dp_ob_title_bk)
 - [ ] [Refactoring: Improving the Design of Existing Code](https://www.amazon.com/Refactoring-Improving-Existing-Addison-Wesley-Signature/dp/0134757599/ref=sr_1_2?crid=1KHA6NTXMVQ8I&dib=eyJ2IjoiMSJ9.d5ydIv1vhzDGghLAj8wLkmEhti6uojhM8KI4lTkV9jAY3ky5D6MvkhSE6FBXjGzpr5snn6Y8rnEWzqelSfvUNgwkgiEF4otNN_AtPqousmn0lZmjxibwp4s4FDW6CEtnnBWFMk6w2SRSqlI2-RTjo19rjcRQ-P8NLO_Z0yRyPPxZivZ0sF6_i_NqoFCou5o8U0HCHpv3RC3Ak-yF2sZOGAKsPVv7SC3FNTU3yp3HRkY.ywnSuEhy1Ioqe-ZAG49Y0NR1a9dBokOHXq6QSyWMI08&dib_tag=se&keywords=refactoring&qid=1728389182&sprefix=refactorin%2Caps%2C176&sr=8-2)
+- [ ] [Grokking Simplicity: Taming complex software with functional thinking](https://www.amazon.com/Grokking-Simplicity-software-functional-thinking/dp/1617296201)
 
 # Design Patterns
 
