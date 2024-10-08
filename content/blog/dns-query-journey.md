@@ -37,11 +37,6 @@ www.google.com.         155     IN      A       142.251.116.147
 www.google.com.         155     IN      A       142.251.116.104
 www.google.com.         155     IN      A       142.251.116.105
 www.google.com.         155     IN      A       142.251.116.106
-
-;; Query time: 49 msec
-;; SERVER: 10.255.255.254#53(10.255.255.254) (UDP)
-;; WHEN: Sun Sep 22 12:41:08 CDT 2024
-;; MSG SIZE  rcvd: 139
 ```
 
 In the answer section, you can see different IP Addresses associated with Google. Choose any one of these and enter it into your browser's address bar, and you'll be directed to Google.
