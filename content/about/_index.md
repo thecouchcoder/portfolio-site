@@ -14,35 +14,29 @@ I'm Ashley, a software engineer at Zillow Group. I have 8+ years of experience a
 
 This page holds ideas and sources related to topics I'm curious about. Maybe one day I'll get to them all, maybe I won't. Small incremental improvement is still improvement.
 
-# Distributed Systems, Cloud, and Systems Design
+# Technologies
+
+- [ ] Apache Flink
+- [ ] Apache Kafka
+- [x] [Docker and Kubernetes](../blog/devops-primer)
+- [ ] [Kubernetes](https://www.edx.org/learn/kubernetes/the-linux-foundation-introduction-to-kubernetes?index=product&queryID=8e28223aaf8c8bfb69de330ce6a84725&position=1&linked_from=autocomplete&c=autocomplete)
+- [ ] [Istio](https://www.edx.org/learn/kubernetes/the-linux-foundation-introduction-to-istio?webview=false&campaign=Introduction+to+Istio&source=edx&product_category=course&placement_url=https%3A%2F%2Fwww.edx.org%2Fschool%2Flinuxfoundationx)
+- [ ] ElasticSearch
+- [ ] DynamoDb/MongoDb
+
+# Distributed Systems, Cloud, and Systems Design Theory
 
 - [ ] Designing Data Intensive Applications
 - [ ] [MIT Distributed Systems](https://timothya.com/learning/mit-6.824-distributed-systems/)
 - [ ] [Distributed Systems for Fun and Profit](https://book.mixu.net/distsys/)
-- [ ] Apache Flink
-- [ ] Apache Kafka
 - [ ] [Cloud Resume Challenge](https://cloudresumechallenge.dev/)
 - [ ] [100 Days of Devops](https://github.com/100daysofdevops)
 - [ ] AWS certification
-- [x] [Docker and Kubernetes](../blog/devops-primer)
-- [ ] [Kubernetes](https://www.edx.org/learn/kubernetes/the-linux-foundation-introduction-to-kubernetes?index=product&queryID=8e28223aaf8c8bfb69de330ce6a84725&position=1&linked_from=autocomplete&c=autocomplete)
-- [ ] [Istio](https://www.edx.org/learn/kubernetes/the-linux-foundation-introduction-to-istio?webview=false&campaign=Introduction+to+Istio&source=edx&product_category=course&placement_url=https%3A%2F%2Fwww.edx.org%2Fschool%2Flinuxfoundationx)
 - [ ] [Google API Design Documentation](https://cloud.google.com/apis/design/resources)
-- [ ] ElasticSearch
-- [ ] DynamoDb/MongoDb
 - [ ] Composition vs inheritance
 - [ ] Concurrency vs Parallelism
 - [ ] [7 Databases in 7 weeks](https://www.amazon.com/Seven-Databases-Weeks-Modern-Movement-dp-1680502530/dp/1680502530/ref=dp_ob_title_bk)
-- [ ] [Refactoring: Improving the Design of Existing Code](https://www.amazon.com/Refactoring-Improving-Existing-Addison-Wesley-Signature/dp/0134757599/ref=sr_1_2?crid=1KHA6NTXMVQ8I&dib=eyJ2IjoiMSJ9.d5ydIv1vhzDGghLAj8wLkmEhti6uojhM8KI4lTkV9jAY3ky5D6MvkhSE6FBXjGzpr5snn6Y8rnEWzqelSfvUNgwkgiEF4otNN_AtPqousmn0lZmjxibwp4s4FDW6CEtnnBWFMk6w2SRSqlI2-RTjo19rjcRQ-P8NLO_Z0yRyPPxZivZ0sF6_i_NqoFCou5o8U0HCHpv3RC3Ak-yF2sZOGAKsPVv7SC3FNTU3yp3HRkY.ywnSuEhy1Ioqe-ZAG49Y0NR1a9dBokOHXq6QSyWMI08&dib_tag=se&keywords=refactoring&qid=1728389182&sprefix=refactorin%2Caps%2C176&sr=8-2)
 - [ ] [Grokking Simplicity: Taming complex software with functional thinking](https://www.amazon.com/Grokking-Simplicity-software-functional-thinking/dp/1617296201)
-
-# Design Patterns
-
-- [ ] [Christopher Okhravi Youtube Channel](https://www.youtube.com/@ChristopherOkhravi)
-
-# Data Structures and Algorithms
-
-- [ ] MIT Data Structures and Algorithms
 
 # Foundational Computer Science
 
@@ -53,6 +47,12 @@ This page holds ideas and sources related to topics I'm curious about. Maybe one
 - [ ] [Beej's Guide to Computer Networks](https://beej.us/guide/)
 - [ ] Statistics and Probability
 - [ ] [Calculus](https://betterexplained.com/guides/calculus/)
+- [ ] [MIT Mathematics for Computer Science](https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/)
+- [ ] [MIT Introduction to Algorithms](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/)
+
+# Design Patterns
+
+- [ ] [Christopher Okhravi Youtube Channel](https://www.youtube.com/@ChristopherOkhravi)
 
 # JavaScript
 
@@ -82,3 +82,8 @@ This page holds ideas and sources related to topics I'm curious about. Maybe one
 - [ ] [Show Your Work](https://austinkleon.com/show-your-work/)
 - [ ] [Writing to Learn](https://www.amazon.com/Writing-Learn-Write-Clearly-Subject-ebook)
 - [ ] [The Phoenix Project](https://www.amazon.com/Phoenix-Project-DevOps-Helping-Business/dp/1942788290)
+- [ ] [Refactoring: Improving the Design of Existing Code](https://www.amazon.com/Refactoring-Improving-Existing-Addison-Wesley-Signature/dp/0134757599/ref=sr_1_2?crid=1KHA6NTXMVQ8I&dib=eyJ2IjoiMSJ9.d5ydIv1vhzDGghLAj8wLkmEhti6uojhM8KI4lTkV9jAY3ky5D6MvkhSE6FBXjGzpr5snn6Y8rnEWzqelSfvUNgwkgiEF4otNN_AtPqousmn0lZmjxibwp4s4FDW6CEtnnBWFMk6w2SRSqlI2-RTjo19rjcRQ-P8NLO_Z0yRyPPxZivZ0sF6_i_NqoFCou5o8U0HCHpv3RC3Ak-yF2sZOGAKsPVv7SC3FNTU3yp3HRkY.ywnSuEhy1Ioqe-ZAG49Y0NR1a9dBokOHXq6QSyWMI08&dib_tag=se&keywords=refactoring&qid=1728389182&sprefix=refactorin%2Caps%2C176&sr=8-2)
+
+# Note Taking
+
+- [ ] [Smart Connections](https://github.com/brianpetro/obsidian-smart-connections)
