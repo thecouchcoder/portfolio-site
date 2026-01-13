@@ -20,9 +20,9 @@ skill:
   item:
     - title: C#
       logo: https://res.cloudinary.com/dhoazk5kt/image/upload/v1715649940/Logo_C_sharp_qq1sjj.svg
-    - title: Go
-      logo: https://res.cloudinary.com/dhoazk5kt/image/upload/v1715649975/Go_Logo_Blue_aeaxi7.svg
+    - title: Python
+      logo: https://res.cloudinary.com/dhoazk5kt/image/upload/v1768337887/1200px-Python-logo-notext.svg_vubjik.png
     - title: JavaScript / TypeScript
       logo: https://res.cloudinary.com/dhoazk5kt/image/upload/v1715649880/logos_javascript_adj1dx_hewnbw.svg
-    - title: Angular
-      logo: https://res.cloudinary.com/dhoazk5kt/image/upload/v1715650073/Angular_full_color_logo_bhti3a.svg
+    - title: React
+      logo: https://res.cloudinary.com/dhoazk5kt/image/upload/v1768337881/1200px-React-icon.svg_mhaieu.png
